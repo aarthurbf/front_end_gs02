@@ -1,0 +1,12 @@
+{
+  "produto": [
+    {
+      "nome": "José",
+      "email": "jose@gmail.com"
+    },
+    {
+      "nome": "Arthur",
+      "email": "arthur@gmail.com"
+    }
+  ]
+}
