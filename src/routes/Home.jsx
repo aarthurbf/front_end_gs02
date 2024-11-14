@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { HomeStyle } from "../css/HomeStyle";
 import { FaSolarPanel, FaSun } from "react-icons/fa";
 import { GiEcology } from "react-icons/gi";
@@ -12,26 +12,21 @@ const Home = () => {
   const images = [Painel3, Painel4, Painel5, Painel6];
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const changeSlide = (direction) => {
+  const changeSlide = (direction) =>
     setCurrentIndex((prevIndex) =>
       direction === "next"
         ? (prevIndex + 1) % images.length
-        : prevIndex === 0
-        ? images.length - 1
-        : prevIndex - 1
+        : (prevIndex - 1 + images.length) % images.length
     );
-  };
 
   return (
     <HomeStyle>
       <section>
-        <section className="slideshow-container">
+        <div className="slideshow-container">
           {images.map((image, index) => (
             <div
               key={index}
-              className={`slide ${
-                index === currentIndex ? "slide-active" : ""
-              }`}
+              className={`slide ${index === currentIndex ? "active" : ""}`}
             >
               <img src={image} alt={`Slide ${index}`} />
             </div>
@@ -42,27 +37,20 @@ const Home = () => {
           <button className="next" onClick={() => changeSlide("next")}>
             ❯
           </button>
-        </section>
+        </div>
 
-        {/* SERVIÇOS */}
-        <section className="informacoes">
+        <div className="informacoes">
           <h3>Venha Conhecer</h3>
           <p>
             Você sabia que os painéis solares podem reduzir até 95% da sua conta
-            de energia e ainda ajudam a preservar o meio ambiente? Essa
-            tecnologia está cada vez mais acessível e é uma excelente forma de
-            contribuir para um futuro sustentável, diminuindo nossa dependência
-            de combustíveis fósseis. Além de economizar, você estará investindo
-            em um mundo mais verde para as próximas gerações. Quer saber mais?
-            Descubra como a energia solar pode transformar seu dia a dia e o
-            planeta!
+            de energia e ainda ajudam a preservar o meio ambiente? Quer saber
+            mais? Descubra como a energia solar pode transformar seu dia a dia e
+            o planeta!
           </p>
           <hr />
-          <ul className="item">
+          <ul className="items">
             <li>
-              <span className="icon-home">
-                <FaSolarPanel />
-              </span>
+              <FaSolarPanel className="icon-home" />
               <h4>Painéis Solares</h4>
               <p>
                 Captam luz solar para gerar eletricidade, ajudando a economizar
@@ -70,9 +58,7 @@ const Home = () => {
               </p>
             </li>
             <li>
-              <span className="icon-home">
-                <FaSun />
-              </span>
+              <FaSun className="icon-home" />
               <h4>Energia Solar</h4>
               <p>
                 Renovável e sem poluição, aproveita a luz do sol para substituir
@@ -80,9 +66,7 @@ const Home = () => {
               </p>
             </li>
             <li>
-              <span className="icon-home">
-                <GiEcology />
-              </span>
+              <GiEcology className="icon-home" />
               <h4>Sustentabilidade</h4>
               <p>
                 Optar por energia solar reduz a pegada de carbono e promove um
@@ -90,21 +74,18 @@ const Home = () => {
               </p>
             </li>
           </ul>
-        </section>
+        </div>
 
         <div className="selection-container">
-          <h1 className="selection-title">COMO FUNCIONA ?</h1>
-          <p className="selection-text">
-            Os painéis solares são dispositivos que captam a luz do sol e a
-            transformam em eletricidade de forma limpa e renovável. Essa
-            tecnologia não emite poluentes e aproveita uma fonte abundante de
-            energia, ajudando a reduzir a dependência de combustíveis fósseis e
-            as emissões de carbono. Com sua instalação cada vez mais acessível,
-            os painéis solares representam um passo essencial para um futuro
-            sustentável, permitindo que residências e empresas economizem
-            energia e contribuam para a preservação ambiental.
+          <h1>COMO FUNCIONA?</h1>
+          <p>
+            Os painéis solares captam a luz do sol e a transformam em
+            eletricidade de forma limpa e renovável, ajudando a reduzir a
+            dependência de combustíveis fósseis e as emissões de carbono.
           </p>
-          <Link to="/solucao"><button className="btn" >Saiba Mais</button></Link>
+          <Link to="/solucao">
+            <button className="btn">Saiba Mais</button>
+          </Link>
         </div>
       </section>
     </HomeStyle>
