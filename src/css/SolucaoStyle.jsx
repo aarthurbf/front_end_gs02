@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SolarImage from '../assets/images/painel3.jpg';
+import SolarImage from "../assets/images/painel3.jpg";
 
 export const SolucaoStyle = styled.section`
   .banner {
@@ -27,7 +27,8 @@ export const SolucaoStyle = styled.section`
     flex-wrap: wrap;
   }
 
-  .specs, .content {
+  .specs,
+  .content {
     flex: 1 1 300px;
     margin: 1rem;
     text-align: center;
@@ -40,12 +41,14 @@ export const SolucaoStyle = styled.section`
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .specs h3, .content h1 {
+  .specs h3,
+  .content h1 {
     color: var(--color5);
     font-size: 2rem;
   }
 
-  .specs p, .content p {
+  .specs p,
+  .content p {
     color: var(--color2);
     font-size: 1.5rem;
     margin: 15px 0;
@@ -101,7 +104,8 @@ export const SolucaoStyle = styled.section`
     object-fit: cover;
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     position: absolute;
     top: 50%;
     font-size: 2rem;
@@ -135,7 +139,8 @@ export const SolucaoStyle = styled.section`
       font-size: 3rem;
     }
 
-    .content p, .specs p {
+    .content p,
+    .specs p {
       font-size: 1.4rem;
     }
   }
@@ -155,7 +160,8 @@ export const SolucaoStyle = styled.section`
   }
 
   @media (max-width: 480px) {
-    .banner h2, .selection-title {
+    .banner h2,
+    .selection-title {
       font-size: 1.5rem;
     }
 
@@ -163,7 +169,8 @@ export const SolucaoStyle = styled.section`
       font-size: 2rem;
     }
 
-    .content p, .specs p {
+    .content p,
+    .specs p {
       font-size: 1rem;
     }
   }
