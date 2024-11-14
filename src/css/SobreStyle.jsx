@@ -30,6 +30,7 @@ export const SobreStyle = styled.section`
   .selection-title {
     color: var(--color3);
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .selection-text {
@@ -61,17 +62,21 @@ export const SobreStyle = styled.section`
     padding-bottom: 0.5rem;
   }
 
-  .form input {
+  .form input,
+  .form button {
     width: 100%;
     padding: 0.75rem;
-    margin-top: 1rem;
-    background: none;
-    border: 2px solid var(--color6);
     border-radius: 0.5rem;
     font-size: 1rem;
-    color: var(--color1);
+    margin-top: 1rem;
     outline: none;
-    transition: border 0.3s;
+    transition: border 0.3s, background 0.3s;
+  }
+
+  .form input {
+    background: none;
+    border: 2px solid var(--color6);
+    color: var(--color1);
   }
 
   .form input:focus {
@@ -79,16 +84,11 @@ export const SobreStyle = styled.section`
   }
 
   .form button {
-    width: 100%;
-    padding: 0.75rem;
     margin-top: 1.5rem;
     background: var(--color2);
     border: none;
     color: var(--color7);
-    font-size: 1rem;
     cursor: pointer;
-    border-radius: 0.5rem;
-    transition: background 0.3s;
   }
 
   .form button:hover {

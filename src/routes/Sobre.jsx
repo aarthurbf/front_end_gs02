@@ -1,12 +1,13 @@
 import { SobreStyle } from "../css/SobreStyle";
 
-const Selection = () => {
+const Sobre = () => {
   return (
     <SobreStyle>
       <section className="selection">
         <div className="banner">
           <h2>TECNOLOGIA INOVADORA</h2>
         </div>
+
         <div className="selection-container">
           <h1 className="selection-title">TECNOLOGIA DE PAINÉIS SOLARES</h1>
           <p className="selection-text">
@@ -36,15 +37,12 @@ const Selection = () => {
             entre consumo de energia e sustentabilidade.
           </p>
         </div>
+
         <div className="selection-form">
           <form className="form">
             <h2>Mais informações</h2>
-            <p type="Nome">
-              <input placeholder="Escreva seu nome" />
-            </p>
-            <p type="Email">
-              <input placeholder="Informe seu email" />
-            </p>
+            <input placeholder="Escreva seu nome" aria-label="Nome" />
+            <input placeholder="Informe seu email" aria-label="Email" />
             <button type="submit">Enviar</button>
           </form>
         </div>
@@ -53,4 +51,4 @@ const Selection = () => {
   );
 };
 
-export default Selection;
+export default Sobre;
