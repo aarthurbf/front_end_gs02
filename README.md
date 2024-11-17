@@ -2,6 +2,7 @@
 
 - Arthur Bobadilla Franchi (555056)
 - Luan Orlandelli Ramos (554747)
+- Jorge Luiz Silva Santos (554418)
 
 # 🌞 Painéis Solares: Energia para um Futuro Verde 🌱
 
